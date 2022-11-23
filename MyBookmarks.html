@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MyBookmarks</title>
+</head>
+
+<body onload="displayCurrentTime();">
+    <div class="pageheader">
+        <b>India (IST): </b><span id="INtime"></span> |
+        <b>US (CDT): </b><span id="UStime"></span> |
+        <b>Poland (CEST): </b><span id="PLtime"></span>
+    </div>
+    <input type="text" id="myInput" onkeyup="superSearch()"
+        placeholder="Search for Application, Change, Incident or SQLCODE" title="Type in a name" autofocus
+        style="text-transform:uppercase">
+    <table id="myTable" hidden="hidden">
+        <tr class="header">
+            <th style="width:30%;">Application</th>
+            <th style="width:70%;">URL</th>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td><a href="https://www.abc.com"
+                    target="_blank">https://www.abc.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td>DEF</td>
+            <td><a href="https://www.def.com"
+                    target="_blank">https://www.def.com</a>
+            </td>
+        </tr>
+    </table>
+    <p id="dynamicURL"></p>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
